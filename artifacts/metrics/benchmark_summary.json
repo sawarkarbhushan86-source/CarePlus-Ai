@@ -1,0 +1,98 @@
+{
+  "benchmark_timestamp": "2026-10-10T07:45:23.314224",
+  "models_evaluated": [
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost",
+    "Calibrated XGBoost"
+  ],
+  "best_model_name": "Calibrated XGBoost",
+  "best_roc_auc": 0.6773,
+  "best_pr_auc": 0.2163,
+  "metrics": {
+    "Logistic Regression": {
+      "model_name": "Logistic Regression",
+      "roc_auc": 0.6657,
+      "pr_auc": 0.2241,
+      "accuracy": 0.1174,
+      "precision": 0.1158,
+      "recall": 1.0,
+      "f1_score": 0.2075,
+      "specificity": 0.0021,
+      "brier_score": 0.2249,
+      "brier_skill_score": -1.2004,
+      "expected_calibration_error": 0.3479,
+      "confusion_matrix": {
+        "tp": 565,
+        "fp": 4316,
+        "tn": 9,
+        "fn": 0
+      },
+      "optimal_threshold": 0.4718
+    },
+    "Random Forest": {
+      "model_name": "Random Forest",
+      "roc_auc": 0.6654,
+      "pr_auc": 0.2105,
+      "accuracy": 0.1172,
+      "precision": 0.1157,
+      "recall": 1.0,
+      "f1_score": 0.2075,
+      "specificity": 0.0018,
+      "brier_score": 0.1836,
+      "brier_skill_score": -0.7969,
+      "expected_calibration_error": 0.2884,
+      "confusion_matrix": {
+        "tp": 565,
+        "fp": 4317,
+        "tn": 8,
+        "fn": 0
+      },
+      "optimal_threshold": 0.4039
+    },
+    "XGBoost": {
+      "model_name": "XGBoost",
+      "roc_auc": 0.6759,
+      "pr_auc": 0.2197,
+      "accuracy": 0.3885,
+      "precision": 0.1431,
+      "recall": 0.8602,
+      "f1_score": 0.2453,
+      "specificity": 0.3269,
+      "brier_score": 0.1108,
+      "brier_skill_score": -0.0842,
+      "expected_calibration_error": 0.1056,
+      "confusion_matrix": {
+        "tp": 486,
+        "fp": 2911,
+        "tn": 1414,
+        "fn": 79
+      },
+      "optimal_threshold": 0.202
+    },
+    "Calibrated XGBoost": {
+      "model_name": "Calibrated XGBoost",
+      "roc_auc": 0.6773,
+      "pr_auc": 0.2163,
+      "accuracy": 0.802,
+      "precision": 0.2387,
+      "recall": 0.3257,
+      "f1_score": 0.2754,
+      "specificity": 0.8643,
+      "brier_score": 0.098,
+      "brier_skill_score": 0.0408,
+      "expected_calibration_error": 0.0157,
+      "confusion_matrix": {
+        "tp": 184,
+        "fp": 587,
+        "tn": 3738,
+        "fn": 381
+      },
+      "optimal_threshold": 0.116
+    }
+  },
+  "dataset_fingerprint": "e965ae6f7b59d3e9e47124135e3153efba436d644331f805e812d26388c1256b",
+  "train_size": 19704,
+  "test_size": 4890,
+  "positive_prevalence_test": 0.1155
+}

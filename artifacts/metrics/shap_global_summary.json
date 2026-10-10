@@ -1,0 +1,27 @@
+{
+  "model_name": "XGBoost",
+  "features": [
+    "Prior Inpatient Admissions",
+    "Discharge: To Home",
+    "Number of Lab Procedures",
+    "Num Active Diabetes Meds",
+    "Primary Diagnosis: Circulatory System",
+    "Total Prior Hospital Encounters",
+    "Length of Hospital Stay (Days)",
+    "Number of Medications",
+    "Discharge: Skilled Nursing Facility (SNF)",
+    "Discharge Disposition Id 22"
+  ],
+  "mean_abs_shap": [
+    0.2081,
+    0.1313,
+    0.0843,
+    0.077,
+    0.0761,
+    0.0752,
+    0.0738,
+    0.071,
+    0.0505,
+    0.0465
+  ]
+}

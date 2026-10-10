@@ -1,0 +1,548 @@
+{
+  "model_name": "Calibrated XGBoost",
+  "uncalibrated_model_name": "XGBoost",
+  "calibration_method": "Platt Scaling (Sigmoid)",
+  "dataset_fingerprint": "e965ae6f7b59d3e9e47124135e3153efba436d644331f805e812d26388c1256b",
+  "test_samples": 4890,
+  "test_prevalence": 0.1155,
+  "uncalibrated_ece": 0.1056,
+  "calibrated_ece": 0.0157,
+  "ece_reduction_pct": 85.1,
+  "brier_score_raw": 0.1108,
+  "brier_score_cal": 0.098,
+  "brier_skill_score": 0.0408,
+  "disparate_impact_ratio": 0.9,
+  "max_fpr_difference": 0.02,
+  "reliability_curve_raw": {
+    "mean_predicted_value": [
+      0.0808,
+      0.1499,
+      0.2457,
+      0.3422,
+      0.4415,
+      0.5426,
+      0.6367,
+      0.7217
+    ],
+    "fraction_of_positives": [
+      0.0419,
+      0.0645,
+      0.1396,
+      0.1789,
+      0.2575,
+      0.3438,
+      0.3684,
+      0.4
+    ]
+  },
+  "reliability_curve_cal": {
+    "mean_predicted_value": [
+      0.0799,
+      0.1321,
+      0.2389,
+      0.3394,
+      0.4187
+    ],
+    "fraction_of_positives": [
+      0.0676,
+      0.1498,
+      0.2664,
+      0.3788,
+      0.3333
+    ]
+  },
+  "subgroup_audit": {
+    "race": [
+      {
+        "subgroup": "Caucasian",
+        "sample_size": 3681,
+        "positive_events_count": 448,
+        "readmission_prevalence": 0.1217,
+        "prevalence_ci_95": [
+          0.1115,
+          0.1327
+        ],
+        "roc_auc": 0.6659,
+        "sensitivity_recall": 0.3237,
+        "recall_ci_95": [
+          0.282,
+          0.3683
+        ],
+        "false_positive_rate": 0.1336,
+        "positive_predictive_value": 0.2513,
+        "selection_rate": 0.1568,
+        "flagged_patients_count": 577,
+        "true_positives": 145,
+        "false_positives": 432,
+        "true_negatives": 2801,
+        "false_negatives": 303,
+        "tpr_disparity": -0.002,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      },
+      {
+        "subgroup": "AfricanAmerican",
+        "sample_size": 935,
+        "positive_events_count": 94,
+        "readmission_prevalence": 0.1005,
+        "prevalence_ci_95": [
+          0.0829,
+          0.1215
+        ],
+        "roc_auc": 0.7154,
+        "sensitivity_recall": 0.3617,
+        "recall_ci_95": [
+          0.2718,
+          0.4625
+        ],
+        "false_positive_rate": 0.1534,
+        "positive_predictive_value": 0.2086,
+        "selection_rate": 0.1743,
+        "flagged_patients_count": 163,
+        "true_positives": 34,
+        "false_positives": 129,
+        "true_negatives": 712,
+        "false_negatives": 60,
+        "tpr_disparity": 0.036,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      },
+      {
+        "subgroup": "Missing / Unknown",
+        "sample_size": 96,
+        "positive_events_count": 5,
+        "readmission_prevalence": 0.0521,
+        "prevalence_ci_95": [
+          0.0224,
+          0.1162
+        ],
+        "roc_auc": 0.6593,
+        "sensitivity_recall": 0.0,
+        "recall_ci_95": [
+          0.0,
+          0.4345
+        ],
+        "false_positive_rate": 0.0879,
+        "positive_predictive_value": 0.0,
+        "selection_rate": 0.0833,
+        "flagged_patients_count": 8,
+        "true_positives": 0,
+        "false_positives": 8,
+        "true_negatives": 83,
+        "false_negatives": 5,
+        "tpr_disparity": -0.3257,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=96, N_pos=5) \u2014 estimates exhibit high sampling variance"
+      },
+      {
+        "subgroup": "Hispanic",
+        "sample_size": 95,
+        "positive_events_count": 14,
+        "readmission_prevalence": 0.1474,
+        "prevalence_ci_95": [
+          0.0899,
+          0.2323
+        ],
+        "roc_auc": 0.7504,
+        "sensitivity_recall": 0.2143,
+        "recall_ci_95": [
+          0.0757,
+          0.4759
+        ],
+        "false_positive_rate": 0.1481,
+        "positive_predictive_value": 0.2,
+        "selection_rate": 0.1579,
+        "flagged_patients_count": 15,
+        "true_positives": 3,
+        "false_positives": 12,
+        "true_negatives": 69,
+        "false_negatives": 11,
+        "tpr_disparity": -0.1114,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=95, N_pos=14) \u2014 estimates exhibit high sampling variance"
+      },
+      {
+        "subgroup": "Other",
+        "sample_size": 55,
+        "positive_events_count": 1,
+        "readmission_prevalence": 0.0182,
+        "prevalence_ci_95": [
+          0.0032,
+          0.0961
+        ],
+        "roc_auc": 0.9815,
+        "sensitivity_recall": 1.0,
+        "recall_ci_95": [
+          0.2065,
+          1.0
+        ],
+        "false_positive_rate": 0.0741,
+        "positive_predictive_value": 0.2,
+        "selection_rate": 0.0909,
+        "flagged_patients_count": 5,
+        "true_positives": 1,
+        "false_positives": 4,
+        "true_negatives": 50,
+        "false_negatives": 0,
+        "tpr_disparity": 0.6743,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=55, N_pos=1) \u2014 estimates exhibit high sampling variance"
+      },
+      {
+        "subgroup": "Asian",
+        "sample_size": 28,
+        "positive_events_count": 3,
+        "readmission_prevalence": 0.1071,
+        "prevalence_ci_95": [
+          0.0371,
+          0.272
+        ],
+        "roc_auc": 0.64,
+        "sensitivity_recall": 0.3333,
+        "recall_ci_95": [
+          0.0615,
+          0.7923
+        ],
+        "false_positive_rate": 0.08,
+        "positive_predictive_value": 0.3333,
+        "selection_rate": 0.1071,
+        "flagged_patients_count": 3,
+        "true_positives": 1,
+        "false_positives": 2,
+        "true_negatives": 23,
+        "false_negatives": 2,
+        "tpr_disparity": 0.0077,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=28, N_pos=3) \u2014 estimates exhibit high sampling variance"
+      }
+    ],
+    "gender": [
+      {
+        "subgroup": "Female",
+        "sample_size": 2701,
+        "positive_events_count": 304,
+        "readmission_prevalence": 0.1126,
+        "prevalence_ci_95": [
+          0.1012,
+          0.125
+        ],
+        "roc_auc": 0.6721,
+        "sensitivity_recall": 0.3026,
+        "recall_ci_95": [
+          0.2537,
+          0.3565
+        ],
+        "false_positive_rate": 0.1402,
+        "positive_predictive_value": 0.215,
+        "selection_rate": 0.1585,
+        "flagged_patients_count": 428,
+        "true_positives": 92,
+        "false_positives": 336,
+        "true_negatives": 2061,
+        "false_negatives": 212,
+        "tpr_disparity": -0.023,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      },
+      {
+        "subgroup": "Male",
+        "sample_size": 2189,
+        "positive_events_count": 261,
+        "readmission_prevalence": 0.1192,
+        "prevalence_ci_95": [
+          0.1063,
+          0.1335
+        ],
+        "roc_auc": 0.6838,
+        "sensitivity_recall": 0.3525,
+        "recall_ci_95": [
+          0.2971,
+          0.4122
+        ],
+        "false_positive_rate": 0.1302,
+        "positive_predictive_value": 0.2682,
+        "selection_rate": 0.1567,
+        "flagged_patients_count": 343,
+        "true_positives": 92,
+        "false_positives": 251,
+        "true_negatives": 1677,
+        "false_negatives": 169,
+        "tpr_disparity": 0.0268,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      }
+    ],
+    "age": [
+      {
+        "subgroup": "[70-80)",
+        "sample_size": 1296,
+        "positive_events_count": 159,
+        "readmission_prevalence": 0.1227,
+        "prevalence_ci_95": [
+          0.1059,
+          0.1417
+        ],
+        "roc_auc": 0.6815,
+        "sensitivity_recall": 0.3585,
+        "recall_ci_95": [
+          0.2881,
+          0.4356
+        ],
+        "false_positive_rate": 0.1522,
+        "positive_predictive_value": 0.2478,
+        "selection_rate": 0.1775,
+        "flagged_patients_count": 230,
+        "true_positives": 57,
+        "false_positives": 173,
+        "true_negatives": 964,
+        "false_negatives": 102,
+        "tpr_disparity": 0.0328,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      },
+      {
+        "subgroup": "[60-70)",
+        "sample_size": 1033,
+        "positive_events_count": 124,
+        "readmission_prevalence": 0.12,
+        "prevalence_ci_95": [
+          0.1016,
+          0.1413
+        ],
+        "roc_auc": 0.6472,
+        "sensitivity_recall": 0.3226,
+        "recall_ci_95": [
+          0.2467,
+          0.4091
+        ],
+        "false_positive_rate": 0.1694,
+        "positive_predictive_value": 0.2062,
+        "selection_rate": 0.1878,
+        "flagged_patients_count": 194,
+        "true_positives": 40,
+        "false_positives": 154,
+        "true_negatives": 755,
+        "false_negatives": 84,
+        "tpr_disparity": -0.0031,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      },
+      {
+        "subgroup": "[50-60)",
+        "sample_size": 849,
+        "positive_events_count": 86,
+        "readmission_prevalence": 0.1013,
+        "prevalence_ci_95": [
+          0.0828,
+          0.1234
+        ],
+        "roc_auc": 0.6842,
+        "sensitivity_recall": 0.2209,
+        "recall_ci_95": [
+          0.1462,
+          0.3195
+        ],
+        "false_positive_rate": 0.0944,
+        "positive_predictive_value": 0.2088,
+        "selection_rate": 0.1072,
+        "flagged_patients_count": 91,
+        "true_positives": 19,
+        "false_positives": 72,
+        "true_negatives": 691,
+        "false_negatives": 67,
+        "tpr_disparity": -0.1047,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      },
+      {
+        "subgroup": "[80-90)",
+        "sample_size": 830,
+        "positive_events_count": 96,
+        "readmission_prevalence": 0.1157,
+        "prevalence_ci_95": [
+          0.0957,
+          0.1392
+        ],
+        "roc_auc": 0.6026,
+        "sensitivity_recall": 0.2604,
+        "recall_ci_95": [
+          0.1831,
+          0.3562
+        ],
+        "false_positive_rate": 0.139,
+        "positive_predictive_value": 0.1969,
+        "selection_rate": 0.153,
+        "flagged_patients_count": 127,
+        "true_positives": 25,
+        "false_positives": 102,
+        "true_negatives": 632,
+        "false_negatives": 71,
+        "tpr_disparity": -0.0652,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      },
+      {
+        "subgroup": "[40-50)",
+        "sample_size": 468,
+        "positive_events_count": 45,
+        "readmission_prevalence": 0.0962,
+        "prevalence_ci_95": [
+          0.0726,
+          0.1262
+        ],
+        "roc_auc": 0.6827,
+        "sensitivity_recall": 0.3556,
+        "recall_ci_95": [
+          0.2322,
+          0.5016
+        ],
+        "false_positive_rate": 0.1158,
+        "positive_predictive_value": 0.2462,
+        "selection_rate": 0.1389,
+        "flagged_patients_count": 65,
+        "true_positives": 16,
+        "false_positives": 49,
+        "true_negatives": 374,
+        "false_negatives": 29,
+        "tpr_disparity": 0.0299,
+        "small_sample_warning": false,
+        "sample_reliability_note": "Adequate sample size (N >= 100, N_pos >= 20)"
+      },
+      {
+        "subgroup": "[30-40)",
+        "sample_size": 166,
+        "positive_events_count": 19,
+        "readmission_prevalence": 0.1145,
+        "prevalence_ci_95": [
+          0.0745,
+          0.1718
+        ],
+        "roc_auc": 0.8289,
+        "sensitivity_recall": 0.4211,
+        "recall_ci_95": [
+          0.2314,
+          0.6372
+        ],
+        "false_positive_rate": 0.102,
+        "positive_predictive_value": 0.3478,
+        "selection_rate": 0.1386,
+        "flagged_patients_count": 23,
+        "true_positives": 8,
+        "false_positives": 15,
+        "true_negatives": 132,
+        "false_negatives": 11,
+        "tpr_disparity": 0.0954,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=166, N_pos=19) \u2014 estimates exhibit high sampling variance"
+      },
+      {
+        "subgroup": "[90-100)",
+        "sample_size": 123,
+        "positive_events_count": 15,
+        "readmission_prevalence": 0.122,
+        "prevalence_ci_95": [
+          0.0753,
+          0.1915
+        ],
+        "roc_auc": 0.6562,
+        "sensitivity_recall": 0.2667,
+        "recall_ci_95": [
+          0.109,
+          0.5195
+        ],
+        "false_positive_rate": 0.1204,
+        "positive_predictive_value": 0.2353,
+        "selection_rate": 0.1382,
+        "flagged_patients_count": 17,
+        "true_positives": 4,
+        "false_positives": 13,
+        "true_negatives": 95,
+        "false_negatives": 11,
+        "tpr_disparity": -0.059,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=123, N_pos=15) \u2014 estimates exhibit high sampling variance"
+      },
+      {
+        "subgroup": "[20-30)",
+        "sample_size": 84,
+        "positive_events_count": 18,
+        "readmission_prevalence": 0.2143,
+        "prevalence_ci_95": [
+          0.1401,
+          0.3135
+        ],
+        "roc_auc": 0.8502,
+        "sensitivity_recall": 0.7222,
+        "recall_ci_95": [
+          0.4913,
+          0.875
+        ],
+        "false_positive_rate": 0.1364,
+        "positive_predictive_value": 0.5909,
+        "selection_rate": 0.2619,
+        "flagged_patients_count": 22,
+        "true_positives": 13,
+        "false_positives": 9,
+        "true_negatives": 57,
+        "false_negatives": 5,
+        "tpr_disparity": 0.3966,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=84, N_pos=18) \u2014 estimates exhibit high sampling variance"
+      },
+      {
+        "subgroup": "[10-20)",
+        "sample_size": 33,
+        "positive_events_count": 3,
+        "readmission_prevalence": 0.0909,
+        "prevalence_ci_95": [
+          0.0314,
+          0.2357
+        ],
+        "roc_auc": 0.9778,
+        "sensitivity_recall": 0.6667,
+        "recall_ci_95": [
+          0.2077,
+          0.9385
+        ],
+        "false_positive_rate": 0.0,
+        "positive_predictive_value": 1.0,
+        "selection_rate": 0.0606,
+        "flagged_patients_count": 2,
+        "true_positives": 2,
+        "false_positives": 0,
+        "true_negatives": 30,
+        "false_negatives": 1,
+        "tpr_disparity": 0.341,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=33, N_pos=3) \u2014 estimates exhibit high sampling variance"
+      },
+      {
+        "subgroup": "[0-10)",
+        "sample_size": 8,
+        "positive_events_count": 0,
+        "readmission_prevalence": 0.0,
+        "prevalence_ci_95": [
+          0.0,
+          0.3244
+        ],
+        "roc_auc": 0.5,
+        "sensitivity_recall": 0.0,
+        "recall_ci_95": [
+          0.0,
+          0.0
+        ],
+        "false_positive_rate": 0.0,
+        "positive_predictive_value": 0.0,
+        "selection_rate": 0.0,
+        "flagged_patients_count": 0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "true_negatives": 8,
+        "false_negatives": 0,
+        "tpr_disparity": -0.3257,
+        "small_sample_warning": true,
+        "sample_reliability_note": "Caution: Under-powered sample (N=8, N_pos=0) \u2014 estimates exhibit high sampling variance"
+      }
+    ]
+  }
+}

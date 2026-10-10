@@ -1,0 +1,205 @@
+{
+  "overview": {
+    "total_encounters": 30000,
+    "readmission_30d_prevalence": 0.1156,
+    "readmission_30d_percentage": 11.56,
+    "avg_length_of_stay": 4.68,
+    "median_length_of_stay": 4.0,
+    "avg_num_medications": 15.23,
+    "avg_num_lab_procedures": 44.81,
+    "avg_num_procedures": 1.41,
+    "readmission_by_age": {
+      "[0-10)": 0.0233,
+      "[10-20)": 0.0512,
+      "[20-30)": 0.1394,
+      "[30-40)": 0.1169,
+      "[40-50)": 0.1157,
+      "[50-60)": 0.1005,
+      "[60-70)": 0.1174,
+      "[70-80)": 0.1248,
+      "[80-90)": 0.1246,
+      "[90-100)": 0.0887
+    },
+    "readmission_by_race": {
+      "AfricanAmerican": 0.1246,
+      "Asian": 0.1096,
+      "Caucasian": 0.114,
+      "Hispanic": 0.1188,
+      "Other": 0.1
+    },
+    "readmission_by_diag": {
+      "Circulatory": 0.1179,
+      "Diabetes": 0.1242,
+      "Digestive": 0.1128,
+      "Genitourinary": 0.106,
+      "Injury": 0.1333,
+      "Missing/Unknown": 0.0,
+      "Musculoskeletal": 0.1137,
+      "Neoplasms": 0.0875,
+      "Other": 0.1218,
+      "Respiratory": 0.0999
+    },
+    "readmission_by_insulin": {
+      "Down": 0.1443,
+      "No": 0.1045,
+      "Steady": 0.1207,
+      "Up": 0.1524
+    },
+    "readmission_by_a1c": {
+      ">7": 0.1122,
+      ">8": 0.096,
+      "Norm": 0.1121
+    },
+    "readmission_by_prior_inpatient": {
+      "0": 0.0865,
+      "1": 0.1415,
+      "2": 0.1909,
+      "3": 0.2252,
+      "4": 0.3001
+    }
+  },
+  "odds_ratios": [
+    {
+      "exposure": "prior_inpatient_visit",
+      "odds_ratio": 2.272,
+      "ci_95_low": 2.115,
+      "ci_95_high": 2.44,
+      "p_value": 7.986526024464944e-110,
+      "significant_at_05": true,
+      "table_counts": {
+        "exposed_cases": 1711,
+        "exposed_controls": 7957,
+        "unexposed_cases": 1758,
+        "unexposed_controls": 18574
+      },
+      "label": "Prior Inpatient Admission (>=1)"
+    },
+    {
+      "exposure": "prior_emergency_visit",
+      "odds_ratio": 1.879,
+      "ci_95_low": 1.64,
+      "ci_95_high": 2.153,
+      "p_value": 9.187940274100273e-18,
+      "significant_at_05": true,
+      "table_counts": {
+        "exposed_cases": 277,
+        "exposed_controls": 1171,
+        "unexposed_cases": 3192,
+        "unexposed_controls": 25360
+      },
+      "label": "Prior Emergency Visit (>=1)"
+    },
+    {
+      "exposure": "length_of_stay_over_7d",
+      "odds_ratio": 1.353,
+      "ci_95_low": 1.241,
+      "ci_95_high": 1.475,
+      "p_value": 1.7156673487596793e-11,
+      "significant_at_05": true,
+      "table_counts": {
+        "exposed_cases": 765,
+        "exposed_controls": 4588,
+        "unexposed_cases": 2704,
+        "unexposed_controls": 21943
+      },
+      "label": "Prolonged Stay (>7 Days)"
+    },
+    {
+      "exposure": "polypharmacy_over_15meds",
+      "odds_ratio": 1.377,
+      "ci_95_low": 1.282,
+      "ci_95_high": 1.478,
+      "p_value": 1.6128177584285214e-18,
+      "significant_at_05": true,
+      "table_counts": {
+        "exposed_cases": 1649,
+        "exposed_controls": 10530,
+        "unexposed_cases": 1820,
+        "unexposed_controls": 16001
+      },
+      "label": "Polypharmacy (>15 Medications)"
+    },
+    {
+      "exposure": "high_diagnoses_over_7",
+      "odds_ratio": 1.396,
+      "ci_95_low": 1.3,
+      "ci_95_high": 1.498,
+      "p_value": 3.0132467935416726e-20,
+      "significant_at_05": true,
+      "table_counts": {
+        "exposed_cases": 1807,
+        "exposed_controls": 11617,
+        "unexposed_cases": 1662,
+        "unexposed_controls": 14914
+      },
+      "label": "Multimorbidity (>7 Diagnoses)"
+    },
+    {
+      "exposure": "insulin_administered",
+      "odds_ratio": 1.27,
+      "ci_95_low": 1.183,
+      "ci_95_high": 1.363,
+      "p_value": 3.987096404223906e-11,
+      "significant_at_05": true,
+      "table_counts": {
+        "exposed_cases": 1759,
+        "exposed_controls": 11872,
+        "unexposed_cases": 1710,
+        "unexposed_controls": 14659
+      },
+      "label": "Insulin Prescribed/Administered"
+    },
+    {
+      "exposure": "medication_changed",
+      "odds_ratio": 1.129,
+      "ci_95_low": 1.051,
+      "ci_95_high": 1.214,
+      "p_value": 0.0009926635756004557,
+      "significant_at_05": true,
+      "table_counts": {
+        "exposed_cases": 1406,
+        "exposed_controls": 9985,
+        "unexposed_cases": 2063,
+        "unexposed_controls": 16546
+      },
+      "label": "Diabetic Medication Adjusted"
+    },
+    {
+      "exposure": "a1c_untested",
+      "odds_ratio": 1.179,
+      "ci_95_low": 1.07,
+      "ci_95_high": 1.299,
+      "p_value": 0.0007776133906168335,
+      "significant_at_05": true,
+      "table_counts": {
+        "exposed_cases": 2926,
+        "exposed_controls": 21769,
+        "unexposed_cases": 543,
+        "unexposed_controls": 4762
+      },
+      "label": "HbA1c Lab Untested"
+    }
+  ],
+  "length_of_stay_comparison": {
+    "metric": "time_in_hospital",
+    "readmitted_mean": 5.19,
+    "non_readmitted_mean": 4.61,
+    "readmitted_median": 4.0,
+    "non_readmitted_median": 4.0,
+    "mann_whitney_u": 51543377.0,
+    "p_value": 3.912231024598936e-31,
+    "cohens_d": 0.187,
+    "significant_at_05": true
+  },
+  "medications_comparison": {
+    "metric": "num_medications",
+    "readmitted_mean": 16.38,
+    "non_readmitted_mean": 15.08,
+    "readmitted_median": 15.0,
+    "non_readmitted_median": 14.0,
+    "mann_whitney_u": 51110918.0,
+    "p_value": 2.1964051368265516e-26,
+    "cohens_d": 0.161,
+    "significant_at_05": true
+  }
+}
